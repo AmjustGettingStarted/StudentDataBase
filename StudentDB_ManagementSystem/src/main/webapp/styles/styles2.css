@@ -1,0 +1,130 @@
+@charset "UTF-8";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  z-index: 1;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e91e63; /* Pink color for heading */
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #e91e63; /* Pink color for labels */
+}
+
+.form-container input,
+.form-container select {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #e91e63; /* Pink border for inputs */
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #e91e63; /* Pink background for button */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+.form-container button:hover {
+  background: #ad1457; /* Darker pink on hover */
+}

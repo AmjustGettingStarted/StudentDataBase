@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bg_heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.container h1, .container h2 a {
+  color: #e91e63; /* Pink color for heading and links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for color and transform */
+}
+
+.container h2 a:hover {
+  color: #ff1744; /* Bright red on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.container h2 a:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.table-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjust width to fit table content */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  z-index: 1; /* Ensure it is above the heart animations */
+}
+
+.table-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e91e63; /* Pink color for heading */
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container table, .table-container th, .table-container td {
+  border: 1px solid #e91e63; /* Pink border for table */
+}
+
+.table-container th, .table-container td {
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add smooth transition for background color and transform */
+}
+
+.table-container tr:hover {
+  background-color: #f8bbd0; /* Light pink highlight on hover */
+  transform: scale(1.02); /* Slightly scale the row on hover */
+}
+
+.table-container .back-to-dashboard {
+  text-decoration: none;
+  color: #e91e63;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out; /* Add smooth transition for transform */
+}
+
+.table-container .back-to-dashboard:hover {
+  color: #ff1744; /* Bright red on hover */
+  transform: scale(1.2); /* Scale the element on hover */
+}
+
+ a {
+  color: #e91e63; /* Set the text color to pink */
+  text-decoration: none; /* Remove the underline */
+  outline: none; /* Remove the focus outline */
+  transition: all 0.3s ease-in-out; /* Add smooth transition for transform */
+}
+
+ a:visited {
+  color: #e91e63 !important; /* Ensure visited links are also pink */
+}
+
+ a:hover {
+  transform: scale(1.2); /* Uniformly scale the element on hover */
+  color: #ff1744 !important; /* Bright red on hover */
+  background-color: #F2D2BD;
+}
+
+a:focus {
+  outline: none !important; /* Remove the focus outline */
+}
